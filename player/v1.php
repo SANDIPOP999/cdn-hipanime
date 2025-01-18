@@ -1,4 +1,9 @@
-<? $videoUrl = $data['video'];
+<?
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$videoUrl = $data['video'];
 $gogoServerUrl = $data['gogoserver'];
 $animeNameWithEP = $data['animeNameWithEP'];
 $episodeNumber = $data['ep_num'];
