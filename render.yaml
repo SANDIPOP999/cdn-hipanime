@@ -6,22 +6,3 @@ services:
     buildCommand: "" # No specific build step required for PHP
     startCommand: php -S 0.0.0.0:8080 -t public
     staticPublishPath: public
-
-    rewrites:
-      # Landing page
-      - source: /
-        destination: /index.html
-
-      # PHP endpoints in the player folder
-      - source: /player/v1.php
-        destination: /player/v1.php
-      - source: /player/v2.php
-        destination: /player/v2.php
-      - source: /player/v3.php
-        destination: /player/v3.php
-      - source: /player/v4.php
-        destination: /player/v4.php
-
-    static:
-      # Serve all files as static assets except for the explicitly handled routes
-      - source: /*
