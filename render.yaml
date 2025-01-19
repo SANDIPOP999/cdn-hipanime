@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: php-app
+    env: php
+    plan: free
+    buildCommand: "" # No specific build step required for PHP
+    startCommand: php -S 0.0.0.0:8080 -t public
+    staticPublishPath: public
+
+    routes:
+      # Landing page
+      - type: static
+        src: /
+        dest: /index.html
+
+      # PHP endpoints in the player folder
+      - type: rewrite
+        src: /player/v1.php
+        dest: /player/v1.php
+      - type: rewrite
+        src: /player/v2.php
+        dest: /player/v2.php
+      - type: rewrite
+        src: /player/v3.php
+        dest: /player/v3.php
+      - type: rewrite
+        src: /player/v4.php
+        dest: /player/v4.php
+
+      # Serve all other files and subdirectories as static files
+      - type: static
+        src: /*
+        dest: /
