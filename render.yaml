@@ -7,27 +7,21 @@ services:
     startCommand: php -S 0.0.0.0:8080 -t public
     staticPublishPath: public
 
-    routes:
+    rewrites:
       # Landing page
-      - type: static
-        src: /
-        dest: /index.html
+      - source: /
+        destination: /index.html
 
       # PHP endpoints in the player folder
-      - type: rewrite
-        src: /player/v1.php
-        dest: /player/v1.php
-      - type: rewrite
-        src: /player/v2.php
-        dest: /player/v2.php
-      - type: rewrite
-        src: /player/v3.php
-        dest: /player/v3.php
-      - type: rewrite
-        src: /player/v4.php
-        dest: /player/v4.php
+      - source: /player/v1.php
+        destination: /player/v1.php
+      - source: /player/v2.php
+        destination: /player/v2.php
+      - source: /player/v3.php
+        destination: /player/v3.php
+      - source: /player/v4.php
+        destination: /player/v4.php
 
-      # Serve all other files and subdirectories as static files
-      - type: static
-        src: /*
-        dest: /
+    static:
+      # Serve all files as static assets except for the explicitly handled routes
+      - source: /*
