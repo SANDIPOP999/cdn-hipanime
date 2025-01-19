@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "player/v1.php" "use": "@vercel/static" }
+  ]
+}
