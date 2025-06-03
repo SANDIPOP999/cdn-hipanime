@@ -165,22 +165,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 .film-poster {
     width: 100%;
+    min-height: 300px; /* ensure image has space */
     border-radius: 3px;
-    overflow: visible;
-    background-color: rgba(255, 255, 255, .1);
-    display: block;
+    overflow: hidden; /* restore if image is absolute */
     position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: block;
 }
+
 .film-poster .film-poster-img, .item-cover-img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+    position: absolute;         /* now top/left/right/bottom work */
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 .film-description,
 .film-text {
