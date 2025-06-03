@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0 !important;
     right: 0 !important
 }
-.film-poster-ahref i, .film-poster-ahref:after, .film-poster-ahref:before, .film-poster-img, .trending-list {
+.anime-poster-ahref i, .anime-poster-ahref:after, .anime-poster-ahref:before, .anime-poster-img, .trending-list {
     transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 .block_area, .film-poster, .nav-item, .nav-item>a, .search-content input.search-input {
     position: relative
 }
-.film-poster {
+.anime-poster {
     width: 100%;
     min-height: 300px; /* ensure image has space */
     border-radius: 3px;
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
-.film-poster .film-poster-img, .item-cover-img {
+.anime-poster .anime-poster-img, .item-cover-img {
     position: absolute;         /* now top/left/right/bottom work */
     top: 0;
     left: 0;
@@ -184,14 +184,7 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
     display: block;
 }
-.film-description,
-.film-text {
-    display: block;
-    overflow: visible;
-    max-height: none;
-    padding: 10px 0;
-    color: #fff;
-}
+
 @media (max-width: 768px) {
   .m-hide {
     display: none !important;
