@@ -169,6 +169,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     background-color: rgba(255, 255, 255, .1);
     display: block
+    position: relative;
 }
 .film-poster .film-poster-img, .item-cover-img {
     position: absolute;
@@ -179,6 +180,24 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0
+}
+.film-description,
+.film-text {
+    display: block;
+    overflow: visible;
+    max-height: none;
+    padding: 10px 0;
+    color: #fff;
+}
+@media (max-width: 768px) {
+  .m-hide {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) {
+  .m-hide {
+    display: block !important;
+  }
 }
 .highlight-text {
     color: #08ebfe
