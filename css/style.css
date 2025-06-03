@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 .film-poster {
     width: 100%;
     border-radius: 3px;
-    overflow: hidden;
+    overflow: visible;
     background-color: rgba(255, 255, 255, .1);
     display: block;
     position: relative;
